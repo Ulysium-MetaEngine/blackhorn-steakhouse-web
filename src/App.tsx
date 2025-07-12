@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Info from './pages/Info';
 import Menus from './pages/Menus';
 import Gallery from './pages/Gallery';
 import Specials from './pages/Specials';
 import Contact from './pages/Contact';
-import Reservations from './pages/Reservations';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -25,8 +25,6 @@ function App() {
         return <Specials />;
       case 'contact':
         return <Contact />;
-      case 'reservations':
-        return <Reservations />;
       default:
         return <Home />;
     }
@@ -38,6 +36,7 @@ function App() {
       <main className="transition-all duration-500 ease-in-out">
         {renderPage()}
       </main>
+      <Footer />
     </div>
   );
 }

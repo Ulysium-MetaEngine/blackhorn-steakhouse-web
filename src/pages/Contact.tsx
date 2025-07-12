@@ -1,22 +1,32 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Car, Utensils } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Car, Utensils, Navigation } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-white">Contact Us</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            We're here to make your dining experience exceptional. Reach out to us for reservations, 
-            private events, or any questions you may have.
+    <div className="min-h-screen bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative h-96 flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-5xl font-bold mb-4 text-white">Contact Us</h1>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Visit us at our downtown location or get in touch for private events
           </p>
         </div>
+      </section>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="grid lg:grid-cols-3 gap-12 py-20">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="lg:col-span-1 space-y-8">
             <div className="bg-gray-800 rounded-lg p-8">
               <h2 className="text-2xl font-bold mb-6 text-amber-400">Get in Touch</h2>
               
@@ -87,90 +97,59 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-gray-800 rounded-lg p-8">
-            <h2 className="text-2xl font-bold mb-6 text-amber-400">Send Us a Message</h2>
-            <form className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject
-                </label>
-                <select
-                  id="subject"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
+          {/* Google Map */}
+          <div className="lg:col-span-2">
+            <div className="bg-gray-800 rounded-lg p-8 h-full">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-amber-400">Find Us</h2>
+                <a
+                  href="https://maps.google.com/?q=123+Financial+Boulevard,+New+York,+NY+10005"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-amber-400 hover:text-amber-300 transition-colors duration-300"
                 >
-                  <option>General Inquiry</option>
-                  <option>Reservation Request</option>
-                  <option>Private Event</option>
-                  <option>Catering</option>
-                  <option>Feedback</option>
-                </select>
+                  <Navigation className="w-4 h-4 mr-2" />
+                  Get Directions
+                </a>
               </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
-                  placeholder="Tell us how we can help you..."
-                ></textarea>
+              
+              {/* Google Map Embed */}
+              <div className="relative w-full h-96 bg-gray-700 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3207!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuMiJX!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Blackhorn Steakhouse Location"
+                  className="rounded-lg"
+                ></iframe>
               </div>
-
-              <button
-                type="submit"
-                className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-              >
-                Send Message
-              </button>
-            </form>
+              
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Parking Information</h3>
+                  <ul className="text-gray-400 space-y-2 text-sm">
+                    <li>• Complimentary valet parking available</li>
+                    <li>• Street parking available after 6 PM</li>
+                    <li>• Nearby parking garage: 125 Financial Blvd</li>
+                    <li>• Wheelchair accessible entrance</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gray-900 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Transportation</h3>
+                  <ul className="text-gray-400 space-y-2 text-sm">
+                    <li>• Subway: 4, 5, 6 to Wall St-William St</li>
+                    <li>• Bus: M15, M20 to Financial District</li>
+                    <li>• Taxi/Uber pickup available on Financial Blvd</li>
+                    <li>• 5-minute walk from South Street Seaport</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

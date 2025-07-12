@@ -51,18 +51,29 @@ export default function Specials() {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-white">Special Offers & Events</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Discover our exclusive weekly specials and monthly events designed to enhance your dining experience
+    <div className="min-h-screen bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative h-96 flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-5xl font-bold mb-4 text-white">Special Offers & Events</h1>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Exclusive weekly specials and monthly events designed to enhance your dining experience
           </p>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Weekly Specials */}
-        <div className="mb-20">
+        <div className="mb-20 py-20">
           <h2 className="text-3xl font-bold mb-12 text-center text-amber-400">Weekly Specials</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {weeklySpecials.map((special, index) => (
@@ -91,7 +102,7 @@ export default function Specials() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-amber-400">{event.price}</div>
-                  <button className="mt-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300">
+                  <button className="mt-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300">
                     Reserve Now
                   </button>
                 </div>
@@ -108,7 +119,7 @@ export default function Specials() {
             ingredients at their peak. From Valentine's Day romantic dinners to New Year's Eve celebrations, 
             make your special occasions even more memorable.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12">
             <div className="bg-black bg-opacity-30 rounded-lg p-6">
               <h3 className="text-xl font-bold text-white mb-4">Valentine's Day</h3>
               <p className="text-amber-100">Romantic five-course dinner for two with champagne service</p>
@@ -126,13 +137,13 @@ export default function Specials() {
           <p className="text-xl text-gray-400 mb-8">
             Subscribe to our newsletter to be the first to know about new specials and exclusive events
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
+          <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none"
+              className="flex-1 px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-amber-400 focus:outline-none w-full"
             />
-            <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+            <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 w-full sm:w-auto">
               Subscribe
             </button>
           </div>

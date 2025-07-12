@@ -5,8 +5,15 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <section className="relative h-screen flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             <span className="text-amber-400">Blackhorn</span> Steakhouse
@@ -15,10 +22,15 @@ export default function Home() {
             Where premium cuts meet culinary excellence. Experience the finest steaks in an atmosphere of refined elegance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            <a
+              href="https://www.opentable.com/blackhorn-steakhouse"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-block text-center"
+            >
               Make a Reservation
-            </button>
-            <button className="border-2 border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+            </a>
+            <button className="border-2 border-gray-600 text-gray-400 hover:bg-gray-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
               View Our Menu
             </button>
           </div>

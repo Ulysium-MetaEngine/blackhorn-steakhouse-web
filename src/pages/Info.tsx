@@ -3,19 +3,28 @@ import { MapPin, Phone, Clock, Users } from 'lucide-react';
 
 export default function Info() {
   return (
-    <div className="min-h-screen py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-white">About Blackhorn Steakhouse</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Since 1998, Blackhorn Steakhouse has been the premier destination for discerning diners seeking 
-            the finest steaks and an unparalleled dining experience.
+    <div className="min-h-screen bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative h-96 flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-5xl font-bold mb-4 text-white">About Blackhorn Steakhouse</h1>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Since 1998, the premier destination for discerning diners seeking the finest steaks
           </p>
         </div>
+      </section>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Story Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-20">
           <div>
             <h2 className="text-3xl font-bold mb-6 text-amber-400">Our Story</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">

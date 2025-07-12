@@ -16,8 +16,15 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
     { id: 'gallery', label: 'Gallery' },
     { id: 'specials', label: 'Specials' },
     { id: 'contact', label: 'Contact' },
-    { id: 'reservations', label: 'Reservations' },
   ];
+
+  const handleNavigation = (itemId: string) => {
+    if (itemId === 'reservations') {
+      window.open('https://www.opentable.com/blackhorn-steakhouse', '_blank');
+    } else {
+      setCurrentPage(itemId);
+    }
+  };
 
   return (
     <header className="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
@@ -39,13 +46,21 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                   onClick={() => setCurrentPage(item.id)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     currentPage === item.id
-                      ? 'bg-amber-600 text-white'
+                      ? 'bg-gray-600 text-white'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
+              <a
+                href="https://www.opentable.com/blackhorn-steakhouse"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+              >
+                Reservations
+              </a>
             </div>
           </nav>
 
@@ -68,18 +83,27 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 <button
                   key={item.id}
                   onClick={() => {
-                    setCurrentPage(item.id);
+                    handleNavigation(item.id);
                     setMobileMenuOpen(false);
                   }}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200 ${
                     currentPage === item.id
-                      ? 'bg-amber-600 text-white'
+                      ? 'bg-gray-600 text-white'
                       : 'text-gray-300 hover:bg-gray-600 hover:text-white'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
+              <a
+                href="https://www.opentable.com/blackhorn-steakhouse"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 rounded-md text-base font-medium w-full text-left text-gray-300 hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Reservations
+              </a>
             </div>
           </div>
         )}
