@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChefHat, Wine, Coffee, Truck, Users } from 'lucide-react';
 
 export default function Menus() {

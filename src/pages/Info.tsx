@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Phone, Clock, Users } from 'lucide-react';
 
 export default function Info() {
@@ -17,7 +16,7 @@ export default function Info() {
         <div className="relative z-10 text-center">
           <h1 className="text-5xl font-bold mb-4 text-white">About Blackhorn Steakhouse</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Since 1998, the premier destination for discerning diners seeking the finest steaks
+            Since 1969, the premier destination for discerning diners seeking the finest steaks
           </p>
         </div>
       </section>
@@ -28,18 +27,14 @@ export default function Info() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-amber-400">Our Story</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Founded by Master Chef Roland Blackhorn, our steakhouse began as a dream to create the perfect 
-              dining experience. With over three decades in the culinary world, Chef Blackhorn brought together 
-              traditional techniques and modern innovation.
+              The blackhorn steakhouse is Scarborough's original steakhouse and has been a favourite with locals and visitors alike since 1969.
+              Over 40 years of experience in the industry has allowed us to perfect our craft.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Every cut of meat is hand-selected from the finest ranches, dry-aged in our custom facility, 
-              and prepared with meticulous attention to detail. Our wine cellar features over 500 selections 
-              from renowned vineyards worldwide.
+              We invite you to experience the Blackhorn difference, where every meal is a celebration of flavor, craftsmanship, and hospitality.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              Today, Blackhorn Steakhouse stands as a testament to culinary excellence, where every meal 
-              is a celebration of flavor, craftsmanship, and hospitality.
+              Serving only the finest cuts of beef, seafood, veal, lamb, chicken and pasta. Experience the finest steaks in an atmosphere of refined elegance.
             </p>
           </div>
           <div className="bg-gray-800 rounded-lg p-8">

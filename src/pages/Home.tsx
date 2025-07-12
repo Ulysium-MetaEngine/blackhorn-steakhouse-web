@@ -1,4 +1,3 @@
-import React from 'react';
 import { Clock, Star, Award } from 'lucide-react';
 
 export default function Home() {
@@ -19,7 +18,7 @@ export default function Home() {
             <span className="text-amber-400">Blackhorn</span> Steakhouse
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-            Where premium cuts meet culinary excellence. Experience the finest steaks in an atmosphere of refined elegance.
+            Serving only the finest cuts of beef, seafood, veal, lamb, chicken and pasta. Experience the finest steaks in an atmosphere of refined elegance since 1969.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Phone, Mail, Clock, Car, Utensils, Navigation } from 'lucide-react';
 
 export default function Contact() {
@@ -36,9 +35,9 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Address</h3>
                     <p className="text-gray-400">
-                      123 Financial Boulevard<br />
-                      Downtown District<br />
-                      New York, NY 10005
+                      251 Ellesmere Rd<br />
+                      Toronto, ON<br />
+                      M1R 4E4
                     </p>
                   </div>
                 </div>
@@ -48,8 +47,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Phone</h3>
                     <p className="text-gray-400">
-                      Reservations: (555) 123-4567<br />
-                      Private Events: (555) 123-4568
+                      Reservations: (416) 449-2841<br />
+                      {/* Private Events: (555) 123-4568 */}
                     </p>
                   </div>
                 </div>
@@ -59,8 +58,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email</h3>
                     <p className="text-gray-400">
-                      info@blackhornsteakhouse.com<br />
-                      events@blackhornsteakhouse.com
+                      blackhornscarborough@gmail.com<br />
                     </p>
                   </div>
                 </div>

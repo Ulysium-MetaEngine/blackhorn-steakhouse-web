@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram, Star, MapPin, Facebook, Twitter, Youtube } from 'lucide-react';
 
 export default function Footer() {
@@ -17,9 +16,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-amber-400 mb-4">Blackhorn Steakhouse</h3>
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">The Blackhorn Steakhouse</h3>
             <p className="text-gray-400 mb-6 max-w-md">
-              Where premium cuts meet culinary excellence. Experience the finest steaks in an atmosphere of refined elegance since 1998.
+              Serving only the finest cuts of beef, seafood, veal, lamb, chicken and pasta. Experience the finest steaks in an atmosphere of refined elegance since 1969.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -53,15 +52,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2 text-gray-400">
-              <p>123 Financial Boulevard</p>
-              <p>New York, NY 10005</p>
+              <p>251 Ellesmere Rd</p>
+              <p>Toronto, ON</p>
+              <p>M1R 4E4</p>
               <p className="mt-4">
                 <span className="block">Reservations:</span>
-                <span className="text-amber-400">(555) 123-4567</span>
+                <span className="text-amber-400">(416) 449-2841</span>
               </p>
               <p>
                 <span className="block">Email:</span>
-                <span className="text-amber-400">info@blackhornsteakhouse.com</span>
+                <span className="text-amber-400">blackhornscarborough@gmail.com</span>
               </p>
             </div>
           </div>
