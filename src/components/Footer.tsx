@@ -1,4 +1,5 @@
 import { Instagram, Star, MapPin, Facebook, Twitter, Youtube } from 'lucide-react';
+import logo from '../assets/images/logo.jpg';
 
 export default function Footer() {
   const socialLinks = [
@@ -16,6 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
+            <img src={logo} alt="Blackhorn Steakhouse Logo" className="h-16 w-auto mb-4" />
             <h3 className="text-2xl font-bold text-amber-400 mb-4">The Blackhorn Steakhouse</h3>
             <p className="text-gray-400 mb-6 max-w-md">
               Serving only the finest cuts of beef, seafood, veal, lamb, chicken and pasta. Experience the finest steaks in an atmosphere of refined elegance since 1969.

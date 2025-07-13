@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/images/logo.jpg'; // Adjust the path as necessary
 
 interface HeaderProps {
   currentPage: string;
@@ -31,7 +32,12 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="Blackhorn Steakhouse Logo"
+              className="h-10 w-auto"
+            />
             <h1 className="text-2xl font-bold text-amber-400">
               Blackhorn Steakhouse
             </h1>
