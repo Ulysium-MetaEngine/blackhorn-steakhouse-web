@@ -87,7 +87,7 @@ export default function Gallery() {
     : galleryImages.filter(img => img.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-theme-900">
       {/* Hero Section */}
       <section className="relative h-64 sm:h-80 lg:h-96 flex items-center justify-center">
         <div 
@@ -116,7 +116,7 @@ export default function Gallery() {
               className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                 activeCategory === category
                   ? 'bg-amber-600 text-white'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  : 'bg-theme-700 text-gray-300 hover:bg-theme-600'
               }`}
             >
               {category}
@@ -129,7 +129,7 @@ export default function Gallery() {
           {filteredImages.map((image, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden rounded-lg bg-gray-800 aspect-square cursor-pointer transform transition-all duration-300 hover:scale-105"
+              className="group relative overflow-hidden rounded-lg bg-theme-700 aspect-square cursor-pointer transform transition-all duration-300 hover:scale-105"
               onClick={() => setSelectedImage(index)}
             >
               <img
@@ -153,16 +153,16 @@ export default function Gallery() {
         </div>
 
         {/* Call to Action */}
-        <div className="mb-12 lg:mb-20 text-center bg-gray-800 rounded-lg p-8 lg:p-12">
+        <div className="mb-12 lg:mb-20 text-center bg-theme-700 rounded-lg p-8 lg:p-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Experience It Yourself</h2>
-          <p className="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Pictures can only capture so much. Come and taste the difference that passion and excellence make.
           </p>
           <a
             href="https://www.opentable.com/blackhorn-steakhouse"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-600 hover:bg-gray-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-block"
+            className="bg-theme-600 hover:bg-theme-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-block"
           >
             Make a Reservation
           </a>
@@ -175,7 +175,7 @@ export default function Gallery() {
           <div className="relative max-w-4xl max-h-full">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+              className="absolute top-4 right-4 text-white hover:text-theme-400 z-10"
             >
               <X className="w-8 h-8" />
             </button>
@@ -184,9 +184,9 @@ export default function Gallery() {
               alt={filteredImages[selectedImage].title}
               className="max-w-full max-h-full object-contain rounded-lg"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+            <div className="absolute bottom-0 left-0 right-0 bg-theme-900 bg-opacity-90 text-white p-4 rounded-b-lg">
               <h3 className="text-xl font-bold mb-2">{filteredImages[selectedImage].title}</h3>
-              <p className="text-gray-300">{filteredImages[selectedImage].description}</p>
+              <p className="text-theme-400">{filteredImages[selectedImage].description}</p>
             </div>
           </div>
         </div>

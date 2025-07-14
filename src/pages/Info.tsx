@@ -1,8 +1,8 @@
-import { MapPin, Phone, Clock, Users } from 'lucide-react';
+import { MapPin, Clock, Award, Beef } from 'lucide-react';
 
 export default function Info() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-theme-900">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center">
         <div 
@@ -21,7 +21,7 @@ export default function Info() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Story Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 py-20">
           <div>
@@ -37,23 +37,23 @@ export default function Info() {
               Serving only the finest cuts of beef, seafood, veal, lamb, chicken and pasta. Experience the finest steaks in an atmosphere of refined elegance.
             </p>
           </div>
-          <div className="bg-gray-800 rounded-lg p-8">
+          <div className="bg-theme-800 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-6 text-white text-center">Quick Facts</h3>
             <div className="space-y-4">
               <div className="flex items-center">
                 <MapPin className="w-6 h-6 text-amber-400 mr-4" />
-                <span className="text-gray-300">Downtown Financial District</span>
+                <span className="text-gray-300">Ellesmere Road, Scaraborough</span>
               </div>
               <div className="flex items-center">
-                <Users className="w-6 h-6 text-amber-400 mr-4" />
-                <span className="text-gray-300">Capacity for 120 guests</span>
+                <Beef className="w-6 h-6 text-amber-400 mr-4" />
+                <span className="text-gray-300">Variety of Meats</span>
               </div>
               <div className="flex items-center">
                 <Clock className="w-6 h-6 text-amber-400 mr-4" />
                 <span className="text-gray-300">25+ Years of Excellence</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-6 h-6 text-amber-400 mr-4" />
+                <Award className="w-6 h-6 text-amber-400 mr-4" />
                 <span className="text-gray-300">Award-Winning Service</span>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function Info() {
         </div>
 
         {/* Values Section */}
-        <div className="bg-gray-800 rounded-lg p-12">
+        <div className="bg-theme-800 rounded-lg p-12">
           <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">

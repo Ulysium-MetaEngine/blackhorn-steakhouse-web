@@ -545,7 +545,7 @@ export default function Menus() {
 
   const renderMenuItems = (items: any[]) => {
     return items.map((item, index) => (
-      <div key={index} className="border-b border-gray-700 last:border-b-0 pb-6 last:pb-0 mb-6 last:mb-0">
+      <div key={index} className="border-b border-theme-600 last:border-b-0 pb-6 last:pb-0 mb-6 last:mb-0">
         <div className="flex flex-col lg:flex-row gap-6">
           {item.image && (
             <div className="w-full lg:w-40 h-32 lg:h-40 flex-shrink-0">
@@ -558,20 +558,20 @@ export default function Menus() {
           )}
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3">
-              <h4 className="text-xl font-bold text-white mb-2 sm:mb-0">{item.name}</h4>
+              <h4 className="text-xl font-semibold text-white mb-2 sm:mb-0">{item.name}</h4>
               {item.price && !item.sizes && (
                 <span className="text-xl font-bold text-amber-400 sm:ml-4">{item.price}</span>
               )}
             </div>
-            <p className="text-gray-400 mb-4 leading-relaxed">{item.description}</p>
+            <p className="text-gray-300 mb-4 leading-relaxed">{item.description}</p>
             
             {/* Handle multiple sizes for catering */}
             {item.sizes && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {item.sizes.map((sizeOption: any, sizeIndex: number) => (
-                  <div key={sizeIndex} className="bg-gray-800 rounded-lg p-3 text-center">
+                  <div key={sizeIndex} className="bg-theme-800 rounded-lg p-3 text-center">
                     <div className="text-sm font-semibold text-amber-400 mb-1">{sizeOption.size}</div>
-                    <div className="text-xs text-gray-400 mb-2">Serves {sizeOption.serves}</div>
+                    <div className="text-xs text-gray-300 mb-2">Serves {sizeOption.serves}</div>
                     <div className="text-lg font-bold text-white">{sizeOption.price}</div>
                   </div>
                 ))}
@@ -580,8 +580,8 @@ export default function Menus() {
             
             {/* Handle package items */}
             {item.minimumOrder && (
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3 pt-3 border-t border-gray-700">
-                <div className="text-sm text-gray-500 mb-2 sm:mb-0">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3 pt-3 border-t border-theme-600">
+                <div className="text-sm text-gray-300 mb-2 sm:mb-0">
                   <span className="font-semibold">Minimum:</span> {item.minimumOrder}
                 </div>
                 <div className="text-xl font-bold text-amber-400">{item.price}</div>
@@ -616,10 +616,10 @@ export default function Menus() {
         </h3>
         {Object.entries(section).map(([subSectionName, items]) => (
           <div key={subSectionName} className="mb-8">
-            <h4 className="text-xl font-semibold text-white mb-4 pl-4 border-l-4 border-amber-400">
+            <h4 className="text-xl font-bold text-white mb-4 pl-4 border-l-4 border-amber-400 ">
               {subSectionName}
             </h4>
-            <div className="space-y-6 ml-4">
+            <div className="space-y-4 ml-10 font-semibold">
               {Array.isArray(items) ? renderMenuItems(items) : renderMenuSection(items, subSectionName)}
             </div>
           </div>
@@ -631,7 +631,7 @@ export default function Menus() {
   const currentMenuData = menuData[activeMenu as keyof typeof menuData];
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-theme-900">
       {/* Hero Section */}
       <section className="relative h-64 sm:h-80 lg:h-96 flex items-center justify-center">
         <div 
@@ -644,7 +644,7 @@ export default function Menus() {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">Our Menus</h1>
-          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-theme-200 max-w-2xl mx-auto">
             Discover our comprehensive dining options, from premium steaks to catering services
           </p>
         </div>
@@ -660,7 +660,7 @@ export default function Menus() {
               className={`flex items-center gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
                 activeMenu === menu.id
                   ? 'bg-amber-600 text-white'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  : 'bg-theme-800 text-theme-300 hover:bg-theme-700'
               }`}
             >
               {menu.icon}
@@ -671,7 +671,7 @@ export default function Menus() {
         </div>
 
         {/* Menu Content */}
-        <div className="bg-gray-800 rounded-lg p-4 sm:p-6 lg:p-8">
+        <div className="bg-theme-800 rounded-lg p-4 sm:p-6 lg:p-8">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 lg:mb-8 text-center text-amber-400 capitalize">
             {mainMenus.find(m => m.id === activeMenu)?.label}
           </h2>
@@ -684,47 +684,47 @@ export default function Menus() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-12 lg:mt-16 text-center bg-gray-800 rounded-lg p-6 lg:p-8">
+        <div className="mt-12 lg:mt-16 text-center bg-theme-800 rounded-lg p-6 lg:p-8">
           <div className="max-w-3xl mx-auto">
             {activeMenu === 'menu' && (
-              <p className="text-gray-400 mb-4">
+              <p className="text-white mb-4">
                 All steaks are served with your choice of sides and signature sauces. 
                 Please inform us of any dietary restrictions or allergies.
               </p>
             )}
             {activeMenu === 'catering' && (
               <div className="space-y-4">
-                <p className="text-gray-400">
+                <p className="text-gray-300">
                   All catering packages include setup, service, and cleanup. 
                   Minimum 48-hour notice required for all catering orders.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
-                  <div className="bg-gray-900 rounded-lg p-3">
+                  <div className="bg-theme-900 rounded-lg p-3">
                     <div className="font-semibold text-amber-400">1/4 Tray</div>
-                    <div className="text-gray-400">6-10 people</div>
+                    <div className="text-gray-300">6-10 people</div>
                   </div>
-                  <div className="bg-gray-900 rounded-lg p-3">
+                  <div className="bg-theme-900 rounded-lg p-3">
                     <div className="font-semibold text-amber-400">1/2 Tray</div>
-                    <div className="text-gray-400">12-15 people</div>
+                    <div className="text-gray-300">12-15 people</div>
                   </div>
-                  <div className="bg-gray-900 rounded-lg p-3">
+                  <div className="bg-theme-900 rounded-lg p-3">
                     <div className="font-semibold text-amber-400">Full Tray</div>
-                    <div className="text-gray-400">20-25 people</div>
+                    <div className="text-gray-300">20-25 people</div>
                   </div>
-                  <div className="bg-gray-900 rounded-lg p-3">
+                  <div className="bg-theme-900 rounded-lg p-3">
                     <div className="font-semibold text-amber-400">Double Tray</div>
-                    <div className="text-gray-400">40-50 people</div>
+                    <div className="text-gray-300">40-50 people</div>
                   </div>
                 </div>
               </div>
             )}
             {activeMenu === 'delivery' && (
-              <p className="text-gray-400 mb-4">
+              <p className="text-white mb-4">
                 Delivery available within 15 miles. Minimum order $75. 
                 All meals come with detailed reheating instructions.
               </p>
             )}
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-300 mt-4">
               Prices subject to change. Tax and gratuity not included.
             </p>
           </div>
